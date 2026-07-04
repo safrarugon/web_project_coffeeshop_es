@@ -5,61 +5,74 @@ body {
   font-size: 16px;
   line-height: 20px;
   background-color: #ffffff;
-  background-image: url(background_header.svg);
   background-repeat: no-repeat;
   background-position: top center;
-}
-span {
-  font-family: "Noto Serif","Times New Roman", serif;
-  font-style: italic;
-  font-size: 58px;
-  line-height: 72px;
-  color: #FF976B;
+  background-size: cover;
   margin: 0;
-  display: block;
 }
-
-header {
+.header {
   position: relative;
   min-height: 720px;
   max-height: 800px;
   height: 100vh;
+  background-image: url(../img/background_header.svg);
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
 }
-.logo {
+.header-title__span {
+  font-family: "Noto Serif", "Times New Roman", serif;
+  font-style: italic;
+  font-size: 58px;
+  line-height: 72px;
+  color: #ff976b;
+  margin: 0;
+  display: block;
+}
+
+.header-logo {
   position: absolute;
   top: 30px;
   left: 30px;
   width: 105px;
   height: 39px;
 }
-.nav-links {
-    display: flex;
-    column-gap: 20px;
-    list-style: none;
-    position: absolute;
-    top: 30px;
-    right: 26px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+.footer-logo {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  width: 105px;
+  height: 39px;
+}
+.nav-header__links {
+  display: flex;
+  column-gap: 20px;
+  list-style: none;
+  position: absolute;
+  top: 30px;
+  right: 26px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
 }
 
-.nav-link {
+.nav-header__link {
   text-decoration: none;
   color: #444444;
 }
 
-.nav-link:hover {
-  color: #df4300;
+.nav-header__link:hover {
+  color: #ff976b;
 }
-.header-image{
+.header-image {
   position: absolute;
   top: 124px;
   right: 5px;
   width: 646px;
   height: 568px;
 }
-.header-title{
+.header-title {
   position: absolute;
   top: 252px;
   left: 80px;
@@ -72,8 +85,8 @@ h1 {
   letter-spacing: -1px;
   margin: 0;
 }
-.header-description{
-  font-family: "Noto Serif","Times New Roman", serif;
+.header-description {
+  font-family: "Noto Serif", "Times New Roman", serif;
   position: absolute;
   top: 463px;
   left: 80px;
@@ -83,7 +96,7 @@ h1 {
   font-size: 20px;
   line-height: 30px;
 }
-.header-info{
+.header-info {
   position: absolute;
   bottom: 40px;
   display: flex;
@@ -95,10 +108,196 @@ h1 {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  color: #6F6F6F;
+  color: #6f6f6f;
   justify-content: space-between;
   align-items: flex-end;
 }
 p {
   margin: 0;
+}
+.reservation {
+  position: relative;
+  min-height: 720px;
+  max-height: 800px;
+  height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 120px;
+  background-image: url(../img/background_reservation.svg);
+  background-color: #ffd6c5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1000;
+}
+.reservation-form-container {
+  max-width: 385px;
+  text-align: center;
+}
+
+.reservation-form__title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 52px;
+  padding: 0px;
+  margin: 0px;
+}
+.reservation-form {
+  padding-top: 80px;
+  max-width: 385px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.reservation-form__fieldset {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+}
+.reservation-form__label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 8px;
+}
+.reservation-form__input {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 4px;
+  margin-bottom: 32px;
+  height: 60px;
+  color: #838383;
+}
+.reservation-form__button {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 4px;
+  background-color: #e96e3a;
+  color: #ffffff;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+}
+.form__checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+  font-size: 12px;
+}
+
+.form__checkbox-input {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  position: relative;
+  background: white;
+  border: 1px solid #000000;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__checkbox-input:checked {
+  background: #2a2a2a;
+  border: 2px solid #fff;
+  content: url("../img/check.svg");
+}
+
+.form__checkbox-input:checked::after {
+  color: white;
+}
+.reservation-form__button:hover {
+  opacity: 0.7;
+}
+
+.footer {
+  position: relative;
+  height: 400px;
+  background-color: #d35722;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+.footer-adorno {
+  position: absolute;
+  top: -128px;
+  left: -40px;
+  width: 340px;
+  height: 340px;
+  background-color: #e96e3a;
+  border-radius: 50%;
+}
+.footer-container {
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  width: 85%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  margin: 0px;
+  justify-content: top;
+}
+.nav-redes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0px;
+  margin: 0px;
+}
+.footer-copyr {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.nav-redes__links {
+  list-style: none;
+  color: #ffffff;
+}
+.nav-redes__link__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.nav-redes__link {
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: baseline;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+.nav-redes__link:hover {
+  color: #ffd6c5;
 }
